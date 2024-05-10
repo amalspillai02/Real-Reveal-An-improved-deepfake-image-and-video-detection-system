@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('bg2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* width: fit-content; */
+    height: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.media {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #0056b3;
+}
+img{
+    height: 250px;
+    width: 250px;
+}

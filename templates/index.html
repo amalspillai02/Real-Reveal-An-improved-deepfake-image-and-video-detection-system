@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Reveal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Real Reveal</h1>
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <div class="upload-section">
+                <input type="file" name="file" id="fileInput" accept=".png, .jpg, .jpeg, .mp4" required>
+                <label for="fileInput" class="file-label">Choose File</label>
+            </div>
+            <input type="submit" value="Detect" class="detect-btn">
+        </form>
+    </div>
+</body>
+</html>

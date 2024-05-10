@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+
+        <!-- Display Uploaded Image or Video based on file type -->
+        {% if result == 'Deepfake' %}
+            {% if file_type == 'image' %}
+                <h2>Uploaded Image</h2>
+                <img src="{{ url_for('static', filename='temp/temp.jpg') }}" alt="Uploaded Image" class="media">
+            {% elif file_type == 'video' %}
+                <h2>Uploaded Video</h2>
+                <video controls class="media">
+                    <source src="{{ url_for('static', filename='temp/temp.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% elif result == 'Real' %}
+            {% if file_type == 'image' %}
+                <h2>Uploaded Image</h2>
+                <img src="{{ url_for('static', filename='temp/temp.jpg') }}" alt="Uploaded Image" class="media">
+            {% elif file_type == 'video' %}
+                <h2>Uploaded Video</h2>
+                <video controls class="media">
+                    <source src="{{ url_for('static', filename='temp/temp.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% endif %}
+        
+        <p>{{ result }}</p>
+        <a href="/" class="back-btn">Back to Upload</a>
+    </div>
+</body>
+</html>
